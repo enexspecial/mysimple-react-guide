@@ -1,8 +1,15 @@
 import React from 'react';
 
-const person = () => {
+const person = (props) => {
 
-    return <p>I am a person and i am {Math.floor(Math.random() * 30)} years old</p>;
+    return( 
+        <div>
+             <p onClick={props.click}>I am  {props.name} and i am {props.age} years old</p>
+             <p>{props.children}</p>
+             <input type="text" onChange={props.changed} value={props.name}/>
+        </div>
+   
+    );
 
 }
 
